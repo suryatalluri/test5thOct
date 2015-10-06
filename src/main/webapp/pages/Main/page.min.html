@@ -1,0 +1,44 @@
+<style id="Main.css">
+
+</style>
+<script id="Main.js">
+Application.$controller("MainPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+</script>
+<script id="Main.variables.json">
+var _MainPage_Variables_ ={};
+</script>
+<script id="Main.html" type="text/ng-template">
+<wm-page data-ng-controller="MainPageController" name="page1">
+    <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1" backbutton="false" searchbutton="true"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-menu caption="Menu" name="menu1" dataset="Add, View"></wm-menu>
+            <wm-segmented-control name="segmented_control5">
+                <wm-segment-content caption="add" name="segment_content17"></wm-segment-content>
+                <wm-segment-content caption="View" name="segment_content18"></wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>
